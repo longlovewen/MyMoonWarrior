@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'MyMoonWarrior' target in the 'MyMoonWarrior' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+	#import <UIKit/UIKit.h>
+#endif
