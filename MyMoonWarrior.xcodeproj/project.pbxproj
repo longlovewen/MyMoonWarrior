@@ -228,6 +228,9 @@
 		CEFC52DB16E10B3B0030FAE9 /* ship01.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFC52C316E10B3B0030FAE9 /* ship01.png */; };
 		CEFC52DF16E10BBA0030FAE9 /* Font in Resources */ = {isa = PBXBuildFile; fileRef = CEFC52DD16E10BBA0030FAE9 /* Font */; };
 		CEFC52E016E10BBA0030FAE9 /* Music in Resources */ = {isa = PBXBuildFile; fileRef = CEFC52DE16E10BBA0030FAE9 /* Music */; };
+		CEFC52E316E10E930030FAE9 /* BasicLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEFC52E116E10E930030FAE9 /* BasicLayer.cpp */; };
+		CEFC52E616E110690030FAE9 /* WelcomeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEFC52E416E110690030FAE9 /* WelcomeLayer.cpp */; };
+		CEFC52E916E1184E0030FAE9 /*  AboutLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEFC52E716E1184E0030FAE9 /*  AboutLayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -686,6 +689,12 @@
 		CEFC52C316E10B3B0030FAE9 /* ship01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ship01.png; path = Resources/ship01.png; sourceTree = "<group>"; };
 		CEFC52DD16E10BBA0030FAE9 /* Font */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Font; path = Resources/Font; sourceTree = "<group>"; };
 		CEFC52DE16E10BBA0030FAE9 /* Music */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Music; path = Resources/Music; sourceTree = "<group>"; };
+		CEFC52E116E10E930030FAE9 /* BasicLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BasicLayer.cpp; path = Classes/layer/BasicLayer.cpp; sourceTree = "<group>"; };
+		CEFC52E216E10E930030FAE9 /* BasicLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicLayer.h; path = Classes/layer/BasicLayer.h; sourceTree = "<group>"; };
+		CEFC52E416E110690030FAE9 /* WelcomeLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WelcomeLayer.cpp; path = Classes/layer/WelcomeLayer.cpp; sourceTree = "<group>"; };
+		CEFC52E516E110690030FAE9 /* WelcomeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeLayer.h; path = Classes/layer/WelcomeLayer.h; sourceTree = "<group>"; };
+		CEFC52E716E1184E0030FAE9 /*  AboutLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = " AboutLayer.cpp"; path = "Classes/layer/ AboutLayer.cpp"; sourceTree = "<group>"; };
+		CEFC52E816E1184E0030FAE9 /*  AboutLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = " AboutLayer.h"; path = "Classes/layer/ AboutLayer.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1597,6 +1606,12 @@
 				CEFC529E16E108040030FAE9 /* AppDelegate.cpp */,
 				CEFC52A016E108040030FAE9 /* HelloWorldScene.h */,
 				CEFC52A116E108040030FAE9 /* HelloWorldScene.cpp */,
+				CEFC52E116E10E930030FAE9 /* BasicLayer.cpp */,
+				CEFC52E216E10E930030FAE9 /* BasicLayer.h */,
+				CEFC52E416E110690030FAE9 /* WelcomeLayer.cpp */,
+				CEFC52E516E110690030FAE9 /* WelcomeLayer.h */,
+				CEFC52E716E1184E0030FAE9 /*  AboutLayer.cpp */,
+				CEFC52E816E1184E0030FAE9 /*  AboutLayer.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1873,6 +1888,9 @@
 				CEFC529616E108040030FAE9 /* HttpClient.cpp in Sources */,
 				CEFC529F16E108040030FAE9 /* AppDelegate.cpp in Sources */,
 				CEFC52A216E108040030FAE9 /* HelloWorldScene.cpp in Sources */,
+				CEFC52E316E10E930030FAE9 /* BasicLayer.cpp in Sources */,
+				CEFC52E616E110690030FAE9 /* WelcomeLayer.cpp in Sources */,
+				CEFC52E916E1184E0030FAE9 /*  AboutLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
