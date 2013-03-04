@@ -11,8 +11,12 @@
 
 #include <iostream>
 #include "cocos2d.h"
+#include "SimpleAudioEngine.h"
+
 
 USING_NS_CC;
+
+using namespace CocosDenshion;
 
 class BasicLayer : public CCLayer{
     

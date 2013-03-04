@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE11487416E4E7C1009EB0E6 /* OptionLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE11487216E4E7C1009EB0E6 /* OptionLayer.cpp */; };
 		CEFC500116E108010030FAE9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFC500016E108010030FAE9 /* QuartzCore.framework */; };
 		CEFC500316E108010030FAE9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFC500216E108010030FAE9 /* OpenGLES.framework */; };
 		CEFC500516E108010030FAE9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFC500416E108010030FAE9 /* OpenAL.framework */; };
@@ -234,6 +235,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE11487216E4E7C1009EB0E6 /* OptionLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OptionLayer.cpp; path = Classes/layer/OptionLayer.cpp; sourceTree = "<group>"; };
+		CE11487316E4E7C1009EB0E6 /* OptionLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionLayer.h; path = Classes/layer/OptionLayer.h; sourceTree = "<group>"; };
 		CEFC4FFC16E108010030FAE9 /* MyMoonWarrior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoonWarrior.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFC500016E108010030FAE9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CEFC500216E108010030FAE9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1612,6 +1615,8 @@
 				CEFC52E516E110690030FAE9 /* WelcomeLayer.h */,
 				CEFC52E716E1184E0030FAE9 /*  AboutLayer.cpp */,
 				CEFC52E816E1184E0030FAE9 /*  AboutLayer.h */,
+				CE11487216E4E7C1009EB0E6 /* OptionLayer.cpp */,
+				CE11487316E4E7C1009EB0E6 /* OptionLayer.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1891,6 +1896,7 @@
 				CEFC52E316E10E930030FAE9 /* BasicLayer.cpp in Sources */,
 				CEFC52E616E110690030FAE9 /* WelcomeLayer.cpp in Sources */,
 				CEFC52E916E1184E0030FAE9 /*  AboutLayer.cpp in Sources */,
+				CE11487416E4E7C1009EB0E6 /* OptionLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

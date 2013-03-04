@@ -27,11 +27,16 @@ public:
     CREATE_FUNC( WelcomeLayer );
     
     
+  
     void setupViews();
     
     void startgame_callback( CCObject* pSender );
     void option_callback( CCObject* pSender );
     void about_callback( CCObject* pSender );
+    
+    virtual void onEnter();
+    
+    
     
 };
 #endif /* defined(__MyMoonWarrior__WelcomeLayer__) */

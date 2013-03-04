@@ -10,6 +10,7 @@
 
 #include " AboutLayer.h"
 
+#include "OptionLayer.h"
 WelcomeLayer::WelcomeLayer(){}
 
 WelcomeLayer::~WelcomeLayer(){}
@@ -106,11 +107,42 @@ void WelcomeLayer::startgame_callback( CCObject* pSender ){
 }
 void WelcomeLayer::option_callback( CCObject* pSender ){
 
-        CCLOG( " option game ");
+    CCLOG( " option game ");
+    
+     CCDirector::sharedDirector()->pushScene( CCTransitionFade::create( 0.5f, OptionLayer::scene()));
 
 }
 void WelcomeLayer::about_callback( CCObject* pSender ){
         CCLOG( "about game ");
     
     CCDirector::sharedDirector()->pushScene( CCTransitionFade::create( 0.5f, AboutLayer::scene()));
+}
+
+//  重写onEnter方法
+void WelcomeLayer::onEnter(){
+    
+    CCLayer::onEnter();
+    
+    CCLOG( "onEnter" );
+    
+    //  加入背景音乐
+    
+    //  根据配置文件中记录的信息来播放配置文件
+bool flag =     CCUserDefault::sharedUserDefault()->getBoolForKey( "music_not_playing" );
+    
+    if( !flag ){
+        
+        if( !SimpleAudioEngine::sharedEngine()->isBackgroundMusicPlaying()){
+        
+      SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Music/mainMainMusic.mp3",true );
+        }
+        
+
+    }else{
+        SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+    }
+    
+
+
+
 }
