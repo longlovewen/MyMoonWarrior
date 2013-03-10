@@ -9,6 +9,28 @@
 #ifndef __MyMoonWarrior__PauseLayer__
 #define __MyMoonWarrior__PauseLayer__
 
-#include <iostream>
+#include "BasicLayer.h"
+
+
+//  暂停布景
+class  PauseLayer: public CCLayerColor {
+    
+    
+public:
+    PauseLayer();
+    ~PauseLayer();
+    
+    virtual bool init();
+    
+    void setupViews();
+    
+    CREATE_FUNC( PauseLayer );
+    
+    
+    void play_logic( CCObject* pSender);
+
+    
+};
+
 
 #endif /* defined(__MyMoonWarrior__PauseLayer__) */

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CE11487416E4E7C1009EB0E6 /* OptionLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE11487216E4E7C1009EB0E6 /* OptionLayer.cpp */; };
+		CE4C9D0116ECB84300DDE450 /* DLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9CFF16ECB84300DDE450 /* DLog.cpp */; };
+		CE4C9D0416ECB96500DDE450 /* GamingLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9D0216ECB96500DDE450 /* GamingLayer.cpp */; };
+		CE4C9D0B16ECBD2500DDE450 /* ScoreLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9D0916ECBD2500DDE450 /* ScoreLayer.cpp */; };
+		CE4C9D1216ECC02E00DDE450 /* TimerLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9D1016ECC02E00DDE450 /* TimerLayer.cpp */; };
+		CE4C9D1916ECC3BF00DDE450 /* PauseLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9D1716ECC3BF00DDE450 /* PauseLayer.cpp */; };
 		CEFC500116E108010030FAE9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFC500016E108010030FAE9 /* QuartzCore.framework */; };
 		CEFC500316E108010030FAE9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFC500216E108010030FAE9 /* OpenGLES.framework */; };
 		CEFC500516E108010030FAE9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFC500416E108010030FAE9 /* OpenAL.framework */; };
@@ -237,6 +242,16 @@
 /* Begin PBXFileReference section */
 		CE11487216E4E7C1009EB0E6 /* OptionLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OptionLayer.cpp; path = Classes/layer/OptionLayer.cpp; sourceTree = "<group>"; };
 		CE11487316E4E7C1009EB0E6 /* OptionLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionLayer.h; path = Classes/layer/OptionLayer.h; sourceTree = "<group>"; };
+		CE4C9CFF16ECB84300DDE450 /* DLog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DLog.cpp; path = Classes/utils/DLog.cpp; sourceTree = "<group>"; };
+		CE4C9D0016ECB84300DDE450 /* DLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLog.h; path = Classes/utils/DLog.h; sourceTree = "<group>"; };
+		CE4C9D0216ECB96500DDE450 /* GamingLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GamingLayer.cpp; path = Classes/layer/GamingLayer.cpp; sourceTree = "<group>"; };
+		CE4C9D0316ECB96500DDE450 /* GamingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GamingLayer.h; path = Classes/layer/GamingLayer.h; sourceTree = "<group>"; };
+		CE4C9D0916ECBD2500DDE450 /* ScoreLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScoreLayer.cpp; path = Classes/layer/ScoreLayer.cpp; sourceTree = "<group>"; };
+		CE4C9D0A16ECBD2500DDE450 /* ScoreLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreLayer.h; path = Classes/layer/ScoreLayer.h; sourceTree = "<group>"; };
+		CE4C9D1016ECC02E00DDE450 /* TimerLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TimerLayer.cpp; path = Classes/layer/TimerLayer.cpp; sourceTree = "<group>"; };
+		CE4C9D1116ECC02E00DDE450 /* TimerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimerLayer.h; path = Classes/layer/TimerLayer.h; sourceTree = "<group>"; };
+		CE4C9D1716ECC3BF00DDE450 /* PauseLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PauseLayer.cpp; path = Classes/layer/PauseLayer.cpp; sourceTree = "<group>"; };
+		CE4C9D1816ECC3BF00DDE450 /* PauseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PauseLayer.h; path = Classes/layer/PauseLayer.h; sourceTree = "<group>"; };
 		CEFC4FFC16E108010030FAE9 /* MyMoonWarrior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoonWarrior.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFC500016E108010030FAE9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CEFC500216E108010030FAE9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1617,6 +1632,16 @@
 				CEFC52E816E1184E0030FAE9 /*  AboutLayer.h */,
 				CE11487216E4E7C1009EB0E6 /* OptionLayer.cpp */,
 				CE11487316E4E7C1009EB0E6 /* OptionLayer.h */,
+				CE4C9CFF16ECB84300DDE450 /* DLog.cpp */,
+				CE4C9D0016ECB84300DDE450 /* DLog.h */,
+				CE4C9D0216ECB96500DDE450 /* GamingLayer.cpp */,
+				CE4C9D0316ECB96500DDE450 /* GamingLayer.h */,
+				CE4C9D0916ECBD2500DDE450 /* ScoreLayer.cpp */,
+				CE4C9D0A16ECBD2500DDE450 /* ScoreLayer.h */,
+				CE4C9D1016ECC02E00DDE450 /* TimerLayer.cpp */,
+				CE4C9D1116ECC02E00DDE450 /* TimerLayer.h */,
+				CE4C9D1716ECC3BF00DDE450 /* PauseLayer.cpp */,
+				CE4C9D1816ECC3BF00DDE450 /* PauseLayer.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1897,6 +1922,11 @@
 				CEFC52E616E110690030FAE9 /* WelcomeLayer.cpp in Sources */,
 				CEFC52E916E1184E0030FAE9 /*  AboutLayer.cpp in Sources */,
 				CE11487416E4E7C1009EB0E6 /* OptionLayer.cpp in Sources */,
+				CE4C9D0116ECB84300DDE450 /* DLog.cpp in Sources */,
+				CE4C9D0416ECB96500DDE450 /* GamingLayer.cpp in Sources */,
+				CE4C9D0B16ECBD2500DDE450 /* ScoreLayer.cpp in Sources */,
+				CE4C9D1216ECC02E00DDE450 /* TimerLayer.cpp in Sources */,
+				CE4C9D1916ECC3BF00DDE450 /* PauseLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

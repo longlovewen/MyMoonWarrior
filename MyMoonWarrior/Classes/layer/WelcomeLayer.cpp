@@ -11,6 +11,11 @@
 #include " AboutLayer.h"
 
 #include "OptionLayer.h"
+
+
+#include "GamingLayer.h"
+
+
 WelcomeLayer::WelcomeLayer(){}
 
 WelcomeLayer::~WelcomeLayer(){}
@@ -36,48 +41,56 @@ bool WelcomeLayer::init(){
 //  初始化控件
 void WelcomeLayer::setupViews(){
 
-     setBackgroundImage("loading.png");
-    
-    
-    
-    //  加入Logo
-    CCSprite* pLogo = CCSprite::create( "logo.png" );
-    pLogo->setAnchorPoint( ccp( 0.5, 1) );
-    pLogo->setPosition( ccp( getWinSize().width / 2 ,getWinSize().height - 20 ) );
-    
-    this->addChild( pLogo );
-    
-    //  加入菜单项
-    //  第一步：加入开始菜单
-    CCSprite* pStartNormal = CCSprite::create( "menu.png" ,CCRectMake(0, 0, 126, 33));
-    CCSprite* pStartPressed = CCSprite::create( "menu.png" ,CCRectMake(0, 33, 126, 33));
-    CCSprite* pStartDisabled = CCSprite::create( "menu.png" ,CCRectMake(0, 66, 126, 33));
-    
-    CCMenuItemSprite* startGame = CCMenuItemSprite::create(pStartNormal, pStartPressed, pStartDisabled, this, menu_selector(WelcomeLayer::startgame_callback));
-    
-    //  第二步：加入关于菜单
-    
-    CCSprite* pAboutNormal = CCSprite::create( "menu.png" ,CCRectMake(252, 0, 126, 33));
-    CCSprite* pAboutPressed = CCSprite::create( "menu.png" ,CCRectMake(252, 33, 126, 33));
-    CCSprite* pAboutDisabled = CCSprite::create( "menu.png" ,CCRectMake(252, 66, 126, 33));
-    
-    CCMenuItemSprite* aboutGame = CCMenuItemSprite::create(pAboutNormal, pAboutPressed, pAboutDisabled, this, menu_selector(WelcomeLayer::about_callback ));
-    
-    //  第三部：加入选项菜单
-    CCSprite* pOptionNormal = CCSprite::create( "menu.png" ,CCRectMake(126, 0, 126, 33));
-    CCSprite* pOptionPressed = CCSprite::create( "menu.png" ,CCRectMake(126, 33, 126, 33));
-    CCSprite* pOptionDisabled = CCSprite::create( "menu.png" ,CCRectMake(126, 66, 126, 33));
-    
-    CCMenuItemSprite* optionGame = CCMenuItemSprite::create(pOptionNormal, pOptionPressed, pOptionDisabled, this, menu_selector(WelcomeLayer::option_callback));
-    
-    //  创建菜单
-    CCMenu* pMenu = CCMenu::create( startGame,optionGame,aboutGame,NULL);
-    pMenu->setPosition( ccp(getWinSize().width / 2 ,getWinSize().height / 2 - 20 ) );
-    pMenu->alignItemsVerticallyWithPadding( 10 );
-    
-    this->addChild( pMenu );
-    
+    do {
+        
+        setBackgroundImage("loading.png");
+        
+        
+        
+        //  加入Logo
+        CCSprite* pLogo = CCSprite::create( "logo.png" );
+        pLogo->setAnchorPoint( ccp( 0.5, 1) );
+        pLogo->setPosition( ccp( getWinSize().width / 2 ,getWinSize().height - 20 ) );
+        
+        this->addChild( pLogo,2,111 );
+        
+        //  加入菜单项
+        //  第一步：加入开始菜单
+        CCSprite* pStartNormal = CCSprite::create( "menu.png" ,CCRectMake(0, 0, 126, 33));
+        CCSprite* pStartPressed = CCSprite::create( "menu.png" ,CCRectMake(0, 33, 126, 33));
+        CCSprite* pStartDisabled = CCSprite::create( "menu.png" ,CCRectMake(0, 66, 126, 33));
+        
+        CCMenuItemSprite* startGame = CCMenuItemSprite::create(pStartNormal, pStartPressed, pStartDisabled, this, menu_selector(WelcomeLayer::startgame_callback));
+        
+        //  第二步：加入关于菜单
+        
+        CCSprite* pAboutNormal = CCSprite::create( "menu.png" ,CCRectMake(252, 0, 126, 33));
+        CCSprite* pAboutPressed = CCSprite::create( "menu.png" ,CCRectMake(252, 33, 126, 33));
+        CCSprite* pAboutDisabled = CCSprite::create( "menu.png" ,CCRectMake(252, 66, 126, 33));
+        
+        CCMenuItemSprite* aboutGame = CCMenuItemSprite::create(pAboutNormal, pAboutPressed, pAboutDisabled, this, menu_selector(WelcomeLayer::about_callback ));
+        
+        //  第三部：加入选项菜单
+        CCSprite* pOptionNormal = CCSprite::create( "menu.png" ,CCRectMake(126, 0, 126, 33));
+        CCSprite* pOptionPressed = CCSprite::create( "menu.png" ,CCRectMake(126, 33, 126, 33));
+        CCSprite* pOptionDisabled = CCSprite::create( "menu.png" ,CCRectMake(126, 66, 126, 33));
+        
+        CCMenuItemSprite* optionGame = CCMenuItemSprite::create(pOptionNormal, pOptionPressed, pOptionDisabled, this, menu_selector(WelcomeLayer::option_callback));
+        
+        //  创建菜单
+        CCMenu* pMenu = CCMenu::create( startGame,optionGame,aboutGame,NULL);
+        pMenu->setPosition( ccp(getWinSize().width / 2 ,getWinSize().height / 2 - 20 ) );
+        pMenu->alignItemsVerticallyWithPadding( 10 );
+        
+        this->addChild( pMenu );
+        
+           
+        
 
+        
+    } while (0 );
+    
+  
 }
 
 
@@ -104,7 +117,13 @@ void WelcomeLayer::startgame_callback( CCObject* pSender ){
 
     CCLOG( "start game ");
    
+    CCDirector::sharedDirector()->pushScene( CCTransitionFade::create(0.5f, GamingLayer::scene()));
+       
 }
+
+
+
+
 void WelcomeLayer::option_callback( CCObject* pSender ){
 
     CCLOG( " option game ");

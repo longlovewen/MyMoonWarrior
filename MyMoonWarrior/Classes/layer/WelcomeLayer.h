@@ -37,6 +37,9 @@ public:
     virtual void onEnter();
     
     
+    void action_callback( CCNode* node );
+    
+    
     
 };
 #endif /* defined(__MyMoonWarrior__WelcomeLayer__) */

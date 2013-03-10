@@ -7,3 +7,17 @@
 //
 
 #include "DLog.h"
+
+DLog::DLog(){}
+DLog::~DLog(){}
+
+
+//  显示字符串log
+void DLog::d( const char* content ){
+    
+    if( flag ){
+        CCLOG( "Log==>%s", content  );
+    }
+
+    
+}
