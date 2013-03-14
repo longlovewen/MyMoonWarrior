@@ -11,6 +11,8 @@
 #include "TimerLayer.h"
 #include "PauseLayer.h"
 
+
+
 GamingLayer::GamingLayer(){}
 GamingLayer::~GamingLayer(){}
 
@@ -79,6 +81,19 @@ void GamingLayer::setupViews(){
         
         this->addChild( menu,1,156 );
         
+      
+        
+        
+        
+        //  初始化飞机类
+        mWarrior = WarriorLayer::create();
+        
+        this->addChild(mWarrior ,1);
+        
+        mHeroBulletManager = HeroBulletMananger::create();
+         this->addChild(mHeroBulletManager,1);
+        
+        
         //  加入pause layer 并设定它为隐藏的
         
         PauseLayer* m_pause_layer = PauseLayer::create();
@@ -88,7 +103,15 @@ void GamingLayer::setupViews(){
         this->addChild( m_pause_layer,10,99 );
         
         
+        //  移动英雄子弹的schedule
+        this->schedule( schedule_selector( GamingLayer::warrior_add_new_bullet),0.05f );
+        
     } while ( 0 );
+}
+
+void GamingLayer::warrior_add_new_bullet( float t ){
+
+    mHeroBulletManager->addNewBullet( mWarrior->getHeroPosition(),mWarrior->getHeroSize() );
 }
 
 

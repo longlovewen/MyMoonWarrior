@@ -13,6 +13,8 @@
 		CE4C9D0B16ECBD2500DDE450 /* ScoreLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9D0916ECBD2500DDE450 /* ScoreLayer.cpp */; };
 		CE4C9D1216ECC02E00DDE450 /* TimerLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9D1016ECC02E00DDE450 /* TimerLayer.cpp */; };
 		CE4C9D1916ECC3BF00DDE450 /* PauseLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9D1716ECC3BF00DDE450 /* PauseLayer.cpp */; };
+		CEDEE1FD16F2121E001B7041 /* WarriorLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDEE1FB16F2121E001B7041 /* WarriorLayer.cpp */; };
+		CEDEE20116F21711001B7041 /* HeroBulletManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDEE1FF16F21711001B7041 /* HeroBulletManager.cpp */; };
 		CEFC500116E108010030FAE9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFC500016E108010030FAE9 /* QuartzCore.framework */; };
 		CEFC500316E108010030FAE9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFC500216E108010030FAE9 /* OpenGLES.framework */; };
 		CEFC500516E108010030FAE9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFC500416E108010030FAE9 /* OpenAL.framework */; };
@@ -252,6 +254,10 @@
 		CE4C9D1116ECC02E00DDE450 /* TimerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimerLayer.h; path = Classes/layer/TimerLayer.h; sourceTree = "<group>"; };
 		CE4C9D1716ECC3BF00DDE450 /* PauseLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PauseLayer.cpp; path = Classes/layer/PauseLayer.cpp; sourceTree = "<group>"; };
 		CE4C9D1816ECC3BF00DDE450 /* PauseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PauseLayer.h; path = Classes/layer/PauseLayer.h; sourceTree = "<group>"; };
+		CEDEE1FB16F2121E001B7041 /* WarriorLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WarriorLayer.cpp; path = Classes/layer/WarriorLayer.cpp; sourceTree = "<group>"; };
+		CEDEE1FC16F2121E001B7041 /* WarriorLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WarriorLayer.h; path = Classes/layer/WarriorLayer.h; sourceTree = "<group>"; };
+		CEDEE1FF16F21711001B7041 /* HeroBulletManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HeroBulletManager.cpp; path = Classes/layer/HeroBulletManager.cpp; sourceTree = "<group>"; };
+		CEDEE20016F21711001B7041 /* HeroBulletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeroBulletManager.h; path = Classes/layer/HeroBulletManager.h; sourceTree = "<group>"; };
 		CEFC4FFC16E108010030FAE9 /* MyMoonWarrior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMoonWarrior.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFC500016E108010030FAE9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CEFC500216E108010030FAE9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1642,6 +1648,10 @@
 				CE4C9D1116ECC02E00DDE450 /* TimerLayer.h */,
 				CE4C9D1716ECC3BF00DDE450 /* PauseLayer.cpp */,
 				CE4C9D1816ECC3BF00DDE450 /* PauseLayer.h */,
+				CEDEE1FB16F2121E001B7041 /* WarriorLayer.cpp */,
+				CEDEE1FC16F2121E001B7041 /* WarriorLayer.h */,
+				CEDEE1FF16F21711001B7041 /* HeroBulletManager.cpp */,
+				CEDEE20016F21711001B7041 /* HeroBulletManager.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1927,6 +1937,8 @@
 				CE4C9D0B16ECBD2500DDE450 /* ScoreLayer.cpp in Sources */,
 				CE4C9D1216ECC02E00DDE450 /* TimerLayer.cpp in Sources */,
 				CE4C9D1916ECC3BF00DDE450 /* PauseLayer.cpp in Sources */,
+				CEDEE1FD16F2121E001B7041 /* WarriorLayer.cpp in Sources */,
+				CEDEE20116F21711001B7041 /* HeroBulletManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

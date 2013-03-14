@@ -11,6 +11,8 @@
 
 #include <iostream>
 #include "BasicLayer.h"
+#include "WarriorLayer.h"
+#include "HeroBulletManager.h"
 
 class GamingLayer: public BasicLayer {
     
@@ -31,6 +33,13 @@ public:
     void background_scroll_logic( float t );
     
     void pause_logic( CCObject* pSender );
+    
+    void warrior_add_new_bullet( float t );
+    
+private:    
+    WarriorLayer* mWarrior;
+    
+    HeroBulletMananger* mHeroBulletManager;
 };
 
 #endif /* defined(__MyMoonWarrior__GamingLayer__) */

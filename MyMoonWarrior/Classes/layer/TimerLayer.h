@@ -13,7 +13,6 @@
 #include "BasicLayer.h"
 
 
-#include "BasicLayer.h"
 
 class TimerLayer: public BasicLayer {
     
