@@ -44,6 +44,7 @@ void PauseLayer::setupViews(){
         
         this->addChild( menu );
         
+      
         
         
     } while (0);
@@ -78,3 +79,4 @@ void PauseLayer::play_logic( CCObject* pSender){
     
 
 }
+

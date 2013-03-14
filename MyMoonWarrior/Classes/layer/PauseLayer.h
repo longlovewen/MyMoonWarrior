@@ -26,7 +26,7 @@ public:
     
     CREATE_FUNC( PauseLayer );
     
-    
+   
     void play_logic( CCObject* pSender);
 
     

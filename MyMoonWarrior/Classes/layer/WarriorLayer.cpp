@@ -71,7 +71,9 @@ bool WarriorLayer::ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent){
     m_warrior->runAction( moveToAction );
     m_warrior->setPosition( pTouch->getLocation() );
     
-    return true;
+    
+    //  修改为返回false  如果为true 则PauseLayer 的CCMenu 获取不到点击事件
+    return false;
 }
 
 void WarriorLayer::registerWithTouchDispatcher(void){
