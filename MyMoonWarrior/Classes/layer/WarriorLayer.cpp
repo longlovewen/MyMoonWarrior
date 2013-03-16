@@ -77,8 +77,12 @@ bool WarriorLayer::ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent){
 }
 
 void WarriorLayer::registerWithTouchDispatcher(void){
+    
 
-    CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this,INT_MIN+1,true);
+    CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this,INT_MIN+1,true	);
+    
+    
+    
 }
 
 //  获取当前精灵的坐标
@@ -90,4 +94,10 @@ CCPoint WarriorLayer::getHeroPosition(){
 CCSize WarriorLayer::getHeroSize(){
 
     return m_warrior->getContentSize();
+}
+
+void WarriorLayer::setEnabledTouch( bool flag ){
+
+    this->setEnabledTouch( flag );
+
 }

@@ -34,6 +34,9 @@ public:
 
     CCSize getHeroSize();
 
+    void setEnabledTouch( bool flag );
+    
+    
 private:
     CCSprite* m_warrior;
 

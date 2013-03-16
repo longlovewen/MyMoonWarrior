@@ -26,7 +26,14 @@ public:
     
     CREATE_FUNC( PauseLayer );
     
+    virtual void registerWithTouchDispatcher(void);
+
    
+    
+    virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
+    
+
+    
     void play_logic( CCObject* pSender);
 
     

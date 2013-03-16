@@ -36,8 +36,9 @@ public:
     
     void warrior_add_new_bullet( float t );
     
+     WarriorLayer* mWarrior;
 private:    
-    WarriorLayer* mWarrior;
+   
     
     HeroBulletMananger* mHeroBulletManager;
 };

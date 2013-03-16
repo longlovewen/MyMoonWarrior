@@ -54,17 +54,19 @@ void PauseLayer::setupViews(){
 //  恢复逻辑
 void PauseLayer::play_logic( CCObject* pSender){
     
-    GamingLayer* fatherNode = (GamingLayer*)getParent();
     
-    // 1.获取 父节点然后 隐藏我们这个暂停layer
-    PauseLayer* m_pause_layer = (PauseLayer*)fatherNode->getChildByTag( 99 );
-    m_pause_layer->setVisible( false );
+    CCLOG("点击恢复");
+    GamingLayer* fatherNode = (GamingLayer*)getParent();   
+
     
+    //  1. 将这个暂停层进行移植
+    fatherNode->removeChildByTag( 99, true );
     
     // 2. 设定CCMenu(父节点中)enable 为true
     CCMenu* menu = (CCMenu*) fatherNode->getChildByTag( 156 );
     menu->setEnabled( true );
     
+    fatherNode->mWarrior->setTouchEnabled( true );
     
     // 3.调用 CCDirector 的 resume 方法
     CCDirector::sharedDirector()->resume();
@@ -75,8 +77,24 @@ void PauseLayer::play_logic( CCObject* pSender){
     
     
     
-    
+    setTouchEnabled( true );
     
 
+}
+
+
+bool PauseLayer::ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent){
+
+    return true;
+}
+
+void PauseLayer::registerWithTouchDispatcher(void){    
+ 
+    
+        CCLayer::registerWithTouchDispatcher();
+    
+    
+       CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this,std::numeric_limits <int> ::min() ,true	);
+    
 }
 

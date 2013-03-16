@@ -94,14 +94,7 @@ void GamingLayer::setupViews(){
          this->addChild(mHeroBulletManager,1);
         
         
-        //  加入pause layer 并设定它为隐藏的
-        
-        PauseLayer* m_pause_layer = PauseLayer::create();
-        m_pause_layer->setPosition( CCPointZero );
-        
-        m_pause_layer->setVisible( false );
-        this->addChild( m_pause_layer,10,99 );
-        
+         
         
         //  移动英雄子弹的schedule
         this->schedule( schedule_selector( GamingLayer::warrior_add_new_bullet),0.05f );
@@ -119,12 +112,18 @@ void GamingLayer::warrior_add_new_bullet( float t ){
 //  暂停逻辑
 void GamingLayer::pause_logic( CCObject* pSender ){
 
+    mWarrior->setTouchEnabled( false );
     
-    // 1.显示这个Pause layer    
-    getChildByTag( 99 )->setVisible( true );
+    //  加入pause layer 并设定它为隐藏的
+    
+    PauseLayer* m_pause_layer = PauseLayer::create();
+    m_pause_layer->setPosition( CCPointZero );
+    
+    m_pause_layer->setVisible( true );
+    this->addChild( m_pause_layer,99,99 );
     
     
-    //  2.调用CCDirector的pause 函数    
+    //  2.调用CCDirector的pause 函数
     CCDirector::sharedDirector()->pause();    
 
     
