@@ -13,6 +13,8 @@
 #include "BasicLayer.h"
 #include "WarriorLayer.h"
 #include "HeroBulletManager.h"
+#include "EnemyManager.h"
+
 
 class GamingLayer: public BasicLayer {
     
@@ -37,8 +39,9 @@ public:
     void warrior_add_new_bullet( float t );
     
      WarriorLayer* mWarrior;
-private:    
-   
+
+    EnemyManager* mEnemyManager;
+
     
     HeroBulletMananger* mHeroBulletManager;
 };

@@ -83,6 +83,10 @@ void GamingLayer::setupViews(){
         
       
         
+        mEnemyManager = EnemyManager::create();
+        
+        this->addChild( mEnemyManager,1 );
+        
         
         
         //  初始化飞机类
