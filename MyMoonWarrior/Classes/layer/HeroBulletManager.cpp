@@ -7,7 +7,7 @@
 //
 
 #include "HeroBulletManager.h"
-
+#define OFFSIDE_HEIGHT 900
 
 HeroBulletMananger::HeroBulletMananger(){}
 HeroBulletMananger::~HeroBulletMananger(){}
@@ -99,7 +99,7 @@ void HeroBulletMananger::moveAllBullets( float t ){
         
         sp->setPositionY( sp->getPositionY() + 10 );
         
-        if( sp->getPositionY() > size.height ){
+        if( sp->getPositionY() > OFFSIDE_HEIGHT){
         
             mBulletsBatchNode->removeChild( sp , true );
             

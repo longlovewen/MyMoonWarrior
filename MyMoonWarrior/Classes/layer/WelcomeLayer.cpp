@@ -146,21 +146,21 @@ void WelcomeLayer::onEnter(){
     
     //  加入背景音乐
     
-    //  根据配置文件中记录的信息来播放配置文件
-bool flag =     CCUserDefault::sharedUserDefault()->getBoolForKey( "music_not_playing" );
-    
-    if( !flag ){
-        
-        if( !SimpleAudioEngine::sharedEngine()->isBackgroundMusicPlaying()){
-        
-      SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Music/mainMainMusic.mp3",true );
-        }
-        
-
-    }else{
-        SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
-    }
-    
+//    //  根据配置文件中记录的信息来播放配置文件
+//bool flag =     CCUserDefault::sharedUserDefault()->getBoolForKey( "music_not_playing" );
+//    
+//    if( !flag ){
+//        
+//        if( !SimpleAudioEngine::sharedEngine()->isBackgroundMusicPlaying()){
+//        
+//      SimpleAudioEngine::sharedEngine()->playBackgroundMusic("Music/mainMainMusic.mp3",true );
+//        }
+//        
+//
+//    }else{
+//        SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+//    }
+//    
 
 
 
