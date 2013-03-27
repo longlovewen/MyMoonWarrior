@@ -13,7 +13,8 @@
 		CE4C9D0B16ECBD2500DDE450 /* ScoreLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9D0916ECBD2500DDE450 /* ScoreLayer.cpp */; };
 		CE4C9D1216ECC02E00DDE450 /* TimerLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9D1016ECC02E00DDE450 /* TimerLayer.cpp */; };
 		CE4C9D1916ECC3BF00DDE450 /* PauseLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9D1716ECC3BF00DDE450 /* PauseLayer.cpp */; };
-		CEDB911616F58569004B1FC1 /* EnemyManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDB911416F58569004B1FC1 /* EnemyManager.cpp */; };
+		CE65ED211703281700E84371 /* EnemyModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE65ED1F1703281700E84371 /* EnemyModel.cpp */; };
+		CE65ED2617032DB600E84371 /* EnemyManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE65ED2417032DB600E84371 /* EnemyManager.cpp */; };
 		CEDB911C16F58B19004B1FC1 /* Monster.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEDB911A16F58B19004B1FC1 /* Monster.plist */; };
 		CEDB911D16F58B19004B1FC1 /* Monster.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDB911B16F58B19004B1FC1 /* Monster.png */; };
 		CEDEE1FD16F2121E001B7041 /* WarriorLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDEE1FB16F2121E001B7041 /* WarriorLayer.cpp */; };
@@ -257,8 +258,10 @@
 		CE4C9D1116ECC02E00DDE450 /* TimerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimerLayer.h; path = Classes/layer/TimerLayer.h; sourceTree = "<group>"; };
 		CE4C9D1716ECC3BF00DDE450 /* PauseLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PauseLayer.cpp; path = Classes/layer/PauseLayer.cpp; sourceTree = "<group>"; };
 		CE4C9D1816ECC3BF00DDE450 /* PauseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PauseLayer.h; path = Classes/layer/PauseLayer.h; sourceTree = "<group>"; };
-		CEDB911416F58569004B1FC1 /* EnemyManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EnemyManager.cpp; path = Classes/layer/EnemyManager.cpp; sourceTree = "<group>"; };
-		CEDB911516F58569004B1FC1 /* EnemyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyManager.h; path = Classes/layer/EnemyManager.h; sourceTree = "<group>"; };
+		CE65ED1F1703281700E84371 /* EnemyModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EnemyModel.cpp; path = Classes/enemy/EnemyModel.cpp; sourceTree = "<group>"; };
+		CE65ED201703281700E84371 /* EnemyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyModel.h; path = Classes/enemy/EnemyModel.h; sourceTree = "<group>"; };
+		CE65ED2417032DB600E84371 /* EnemyManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EnemyManager.cpp; path = Classes/enemy/EnemyManager.cpp; sourceTree = "<group>"; };
+		CE65ED2517032DB600E84371 /* EnemyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnemyManager.h; path = Classes/enemy/EnemyManager.h; sourceTree = "<group>"; };
 		CEDB911916F58A8D004B1FC1 /* EnumAndStruct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EnumAndStruct.h; path = Classes/header/EnumAndStruct.h; sourceTree = "<group>"; };
 		CEDB911A16F58B19004B1FC1 /* Monster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Monster.plist; path = Resources/Monster.plist; sourceTree = "<group>"; };
 		CEDB911B16F58B19004B1FC1 /* Monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Monster.png; path = Resources/Monster.png; sourceTree = "<group>"; };
@@ -749,6 +752,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE65ED1E1703272C00E84371 /* enemy */ = {
+			isa = PBXGroup;
+			children = (
+				CE65ED2417032DB600E84371 /* EnemyManager.cpp */,
+				CE65ED2517032DB600E84371 /* EnemyManager.h */,
+				CE65ED1F1703281700E84371 /* EnemyModel.cpp */,
+				CE65ED201703281700E84371 /* EnemyModel.h */,
+			);
+			name = enemy;
+			sourceTree = "<group>";
+		};
+		CE65ED23170329D600E84371 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C9D0216ECB96500DDE450 /* GamingLayer.cpp */,
+				CE4C9D0316ECB96500DDE450 /* GamingLayer.h */,
+				CEFC52E116E10E930030FAE9 /* BasicLayer.cpp */,
+				CEFC52E216E10E930030FAE9 /* BasicLayer.h */,
+				CEFC52E416E110690030FAE9 /* WelcomeLayer.cpp */,
+				CEFC52E516E110690030FAE9 /* WelcomeLayer.h */,
+				CEFC52E716E1184E0030FAE9 /*  AboutLayer.cpp */,
+				CEFC52E816E1184E0030FAE9 /*  AboutLayer.h */,
+				CE11487216E4E7C1009EB0E6 /* OptionLayer.cpp */,
+				CE11487316E4E7C1009EB0E6 /* OptionLayer.h */,
+				CE4C9CFF16ECB84300DDE450 /* DLog.cpp */,
+				CE4C9D0016ECB84300DDE450 /* DLog.h */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		CEDB911816F58A70004B1FC1 /* header */ = {
 			isa = PBXGroup;
 			children = (
@@ -1644,23 +1677,13 @@
 		CEFC529C16E108040030FAE9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CE65ED23170329D600E84371 /* UI */,
+				CE65ED1E1703272C00E84371 /* enemy */,
 				CEDB911816F58A70004B1FC1 /* header */,
 				CEFC529D16E108040030FAE9 /* AppDelegate.h */,
 				CEFC529E16E108040030FAE9 /* AppDelegate.cpp */,
 				CEFC52A016E108040030FAE9 /* HelloWorldScene.h */,
 				CEFC52A116E108040030FAE9 /* HelloWorldScene.cpp */,
-				CEFC52E116E10E930030FAE9 /* BasicLayer.cpp */,
-				CEFC52E216E10E930030FAE9 /* BasicLayer.h */,
-				CEFC52E416E110690030FAE9 /* WelcomeLayer.cpp */,
-				CEFC52E516E110690030FAE9 /* WelcomeLayer.h */,
-				CEFC52E716E1184E0030FAE9 /*  AboutLayer.cpp */,
-				CEFC52E816E1184E0030FAE9 /*  AboutLayer.h */,
-				CE11487216E4E7C1009EB0E6 /* OptionLayer.cpp */,
-				CE11487316E4E7C1009EB0E6 /* OptionLayer.h */,
-				CE4C9CFF16ECB84300DDE450 /* DLog.cpp */,
-				CE4C9D0016ECB84300DDE450 /* DLog.h */,
-				CE4C9D0216ECB96500DDE450 /* GamingLayer.cpp */,
-				CE4C9D0316ECB96500DDE450 /* GamingLayer.h */,
 				CE4C9D0916ECBD2500DDE450 /* ScoreLayer.cpp */,
 				CE4C9D0A16ECBD2500DDE450 /* ScoreLayer.h */,
 				CE4C9D1016ECC02E00DDE450 /* TimerLayer.cpp */,
@@ -1671,8 +1694,6 @@
 				CEDEE1FC16F2121E001B7041 /* WarriorLayer.h */,
 				CEDEE1FF16F21711001B7041 /* HeroBulletManager.cpp */,
 				CEDEE20016F21711001B7041 /* HeroBulletManager.h */,
-				CEDB911416F58569004B1FC1 /* EnemyManager.cpp */,
-				CEDB911516F58569004B1FC1 /* EnemyManager.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1962,7 +1983,8 @@
 				CE4C9D1916ECC3BF00DDE450 /* PauseLayer.cpp in Sources */,
 				CEDEE1FD16F2121E001B7041 /* WarriorLayer.cpp in Sources */,
 				CEDEE20116F21711001B7041 /* HeroBulletManager.cpp in Sources */,
-				CEDB911616F58569004B1FC1 /* EnemyManager.cpp in Sources */,
+				CE65ED211703281700E84371 /* EnemyModel.cpp in Sources */,
+				CE65ED2617032DB600E84371 /* EnemyManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

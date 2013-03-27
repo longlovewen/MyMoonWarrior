@@ -46,6 +46,9 @@ void WelcomeLayer::setupViews(){
         setBackgroundImage("loading.png");
         
         
+        //  加入plist文件
+        CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile( "Monster.plist", "Monster.png");
+        
         
         //  加入Logo
         CCSprite* pLogo = CCSprite::create( "logo.png" );

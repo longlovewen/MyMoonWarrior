@@ -7,7 +7,7 @@
 //
 
 #include "HeroBulletManager.h"
-#define OFFSIDE_HEIGHT 900
+#define OFFSIDE_HEIGHT 1200
 
 HeroBulletMananger::HeroBulletMananger(){}
 HeroBulletMananger::~HeroBulletMananger(){}

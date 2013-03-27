@@ -11,4 +11,38 @@
 
 #include <iostream>
 
+
+#include "BasicLayer.h"
+#include "EnumAndStruct.h"
+
+class EnemyManager : public BasicLayer {
+    
+    
+public:
+    
+    
+    //  敌机的管理的数组
+    CCArray* enemyArray;
+    
+public:
+    
+    EnemyManager();
+    ~EnemyManager();
+    
+    virtual bool init();
+    
+    void setupViews();
+    
+    CREATE_FUNC( EnemyManager );
+    
+    
+    void addEnemy( float t );
+    
+    
+    CCArray* getEnemyArray(  );
+    
+    
+};
+
+
 #endif /* defined(__MyMoonWarrior__EnemyManager__) */

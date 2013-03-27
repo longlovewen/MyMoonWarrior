@@ -103,6 +103,12 @@ void GamingLayer::setupViews(){
         //  移动英雄子弹的schedule
         this->schedule( schedule_selector( GamingLayer::warrior_add_new_bullet),0.05f );
         
+        
+        
+        //  加入敌机
+        mEnemyManager = EnemyManager::create();
+        this->addChild( mEnemyManager , 1 );
+        
     } while ( 0 );
 }
 
