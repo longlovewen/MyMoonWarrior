@@ -86,7 +86,7 @@ bool EnemyModel::init(){
     m_sprite->setPosition( CCPointZero );
     this->addChild( m_sprite );
     //  执行动画
-    m_sprite->runAction( m_action  );
+    this->runAction( m_action  );
     
     //  执行加入子弹和移动子弹的schedule
     this->schedule( schedule_selector( EnemyModel::addNewBullet),0.1f );

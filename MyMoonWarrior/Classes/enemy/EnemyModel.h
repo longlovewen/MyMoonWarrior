@@ -36,6 +36,10 @@ public:
     //  移动子弹的函数
     void moveBullet( float t );
     
+    CC_SYNTHESIZE_READONLY(CCSprite*, m_sprite, PlaneSprite );
+    
+    
+    
 public:
     
     CCSpriteBatchNode* enemyBulletBatchNode;    //  敌机子弹的batchNode
@@ -45,7 +49,6 @@ public:
 private:
 
     CCAction*  m_action;
-    CCSprite*  m_sprite;
     
     
 

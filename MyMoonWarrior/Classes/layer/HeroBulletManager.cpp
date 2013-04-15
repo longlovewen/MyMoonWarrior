@@ -8,7 +8,9 @@
 
 #include "HeroBulletManager.h"
 #define OFFSIDE_HEIGHT 1200
+#include "GamingLayer.h"
 
+#include "EnemyModel.h"
 HeroBulletMananger::HeroBulletMananger(){}
 HeroBulletMananger::~HeroBulletMananger(){}
 
@@ -51,6 +53,9 @@ void HeroBulletMananger::setupViews(){
         this->schedule( schedule_selector( HeroBulletMananger::moveAllBullets),0.015f );
         
         
+        //  5.预加载特效类 和 爆炸动画
+        Effects::sharedEffects()->preLoad();
+        
     } while ( 0 );
      
     
@@ -92,19 +97,45 @@ void HeroBulletMananger::moveAllBullets( float t ){
     CCSize size = getWinSize();
     
     CCObject* obj = NULL;
-    
+    CCObject* oo = NULL;
     CCARRAY_FOREACH( bulletsArray, obj ){
     
         CCSprite* sp = ( CCSprite*)obj;
         
         sp->setPositionY( sp->getPositionY() + 10 );
         
+        //  如果出边界则移除子弹，否则进行判断
         if( sp->getPositionY() > OFFSIDE_HEIGHT){
         
             mBulletsBatchNode->removeChild( sp , true );
             
             bulletsArray->removeObject( sp );
+        }else{
+        
+            GamingLayer* father  = (GamingLayer*)this->getParent();
+            CCArray* eArr = father->mEnemyManager->getEnemyArray();
+            
+            
+            CCARRAY_FOREACH(eArr, oo ){
+               
+                
+                EnemyModel* model = (EnemyModel*)oo;
+                
+                
+                
+                if( sp->boundingBox().containsPoint( model->getPosition())){
+                   
+                    Effects::sharedEffects()->boom( this->getParent(), model->getPosition() );
+                    
+                    
+                }
+                
+            }
+           
         }
+            
+            
+            
     
     }
 

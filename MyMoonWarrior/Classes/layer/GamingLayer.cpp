@@ -109,6 +109,8 @@ void GamingLayer::setupViews(){
         mEnemyManager = EnemyManager::create();
         this->addChild( mEnemyManager , 1 );
         
+     
+        
     } while ( 0 );
 }
 
@@ -186,3 +188,5 @@ CCScene* GamingLayer::scene(){
     
     return sc;
 }
+
+

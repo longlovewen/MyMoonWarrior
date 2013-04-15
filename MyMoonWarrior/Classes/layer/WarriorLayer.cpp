@@ -79,7 +79,7 @@ bool WarriorLayer::ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent){
 void WarriorLayer::registerWithTouchDispatcher(void){
     
 
-    CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this,INT_MIN+1,true	);
+    CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this,0,true	);
     
     
     

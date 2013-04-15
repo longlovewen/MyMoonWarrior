@@ -46,7 +46,7 @@ void EnemyManager::setupViews(){
     enemyArray->addObject( enemyModel );
     
     this->addChild(enemyModel,1);
-
+    enemyModel->setPosition( ccp( getWinSize().width /2 , getWinSize().height * .75) );
     
 }
 

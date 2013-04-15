@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE11487416E4E7C1009EB0E6 /* OptionLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE11487216E4E7C1009EB0E6 /* OptionLayer.cpp */; };
+		CE486DEA171AE9220064F68B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE486DE9171AE9220064F68B /* Default-568h@2x.png */; };
+		CE486DEE171AEDC80064F68B /* Effects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE486DEC171AEDC80064F68B /* Effects.cpp */; };
 		CE4C9D0116ECB84300DDE450 /* DLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9CFF16ECB84300DDE450 /* DLog.cpp */; };
 		CE4C9D0416ECB96500DDE450 /* GamingLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9D0216ECB96500DDE450 /* GamingLayer.cpp */; };
 		CE4C9D0B16ECBD2500DDE450 /* ScoreLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9D0916ECBD2500DDE450 /* ScoreLayer.cpp */; };
@@ -248,6 +250,9 @@
 /* Begin PBXFileReference section */
 		CE11487216E4E7C1009EB0E6 /* OptionLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OptionLayer.cpp; path = Classes/layer/OptionLayer.cpp; sourceTree = "<group>"; };
 		CE11487316E4E7C1009EB0E6 /* OptionLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionLayer.h; path = Classes/layer/OptionLayer.h; sourceTree = "<group>"; };
+		CE486DE9171AE9220064F68B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		CE486DEC171AEDC80064F68B /* Effects.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Effects.cpp; path = Classes/utils/Effects.cpp; sourceTree = "<group>"; };
+		CE486DED171AEDC80064F68B /* Effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Effects.h; path = Classes/utils/Effects.h; sourceTree = "<group>"; };
 		CE4C9CFF16ECB84300DDE450 /* DLog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DLog.cpp; path = Classes/utils/DLog.cpp; sourceTree = "<group>"; };
 		CE4C9D0016ECB84300DDE450 /* DLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DLog.h; path = Classes/utils/DLog.h; sourceTree = "<group>"; };
 		CE4C9D0216ECB96500DDE450 /* GamingLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GamingLayer.cpp; path = Classes/layer/GamingLayer.cpp; sourceTree = "<group>"; };
@@ -752,6 +757,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE486DEB171AEDB00064F68B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C9CFF16ECB84300DDE450 /* DLog.cpp */,
+				CE4C9D0016ECB84300DDE450 /* DLog.h */,
+				CE486DEC171AEDC80064F68B /* Effects.cpp */,
+				CE486DED171AEDC80064F68B /* Effects.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		CE65ED1E1703272C00E84371 /* enemy */ = {
 			isa = PBXGroup;
 			children = (
@@ -776,8 +792,6 @@
 				CEFC52E816E1184E0030FAE9 /*  AboutLayer.h */,
 				CE11487216E4E7C1009EB0E6 /* OptionLayer.cpp */,
 				CE11487316E4E7C1009EB0E6 /* OptionLayer.h */,
-				CE4C9CFF16ECB84300DDE450 /* DLog.cpp */,
-				CE4C9D0016ECB84300DDE450 /* DLog.h */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -793,6 +807,7 @@
 		CEFC4FF116E108000030FAE9 = {
 			isa = PBXGroup;
 			children = (
+				CE486DE9171AE9220064F68B /* Default-568h@2x.png */,
 				CEFC501016E108010030FAE9 /* MyMoonWarrior */,
 				CEFC4FFF16E108010030FAE9 /* Frameworks */,
 				CEFC4FFD16E108010030FAE9 /* Products */,
@@ -1677,6 +1692,7 @@
 		CEFC529C16E108040030FAE9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CE486DEB171AEDB00064F68B /* Utils */,
 				CE65ED23170329D600E84371 /* UI */,
 				CE65ED1E1703272C00E84371 /* enemy */,
 				CEDB911816F58A70004B1FC1 /* header */,
@@ -1788,6 +1804,7 @@
 				CEFC52E016E10BBA0030FAE9 /* Music in Resources */,
 				CEDB911C16F58B19004B1FC1 /* Monster.plist in Resources */,
 				CEDB911D16F58B19004B1FC1 /* Monster.png in Resources */,
+				CE486DEA171AE9220064F68B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1985,6 +2002,7 @@
 				CEDEE20116F21711001B7041 /* HeroBulletManager.cpp in Sources */,
 				CE65ED211703281700E84371 /* EnemyModel.cpp in Sources */,
 				CE65ED2617032DB600E84371 /* EnemyManager.cpp in Sources */,
+				CE486DEE171AEDC80064F68B /* Effects.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1995,7 +2013,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2026,7 +2045,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,

@@ -13,6 +13,7 @@
 
 #include "BasicLayer.h"
 
+#include "Effects.h"
 class HeroBulletMananger: public BasicLayer {
     
     
@@ -33,10 +34,12 @@ public:
     
     void moveAllBullets( float t );
     
+    //  利用系统自带的宏 创建一个protected的变量bulletsArray  和 一个返回bulletsArray的const 函数
+    CC_SYNTHESIZE_READONLY(CCArray*, bulletsArray, BulletsArray );
     
 private:
     CCSpriteBatchNode* mBulletsBatchNode;
-    CCArray* bulletsArray;
+
     
     
     

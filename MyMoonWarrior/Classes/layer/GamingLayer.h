@@ -14,8 +14,8 @@
 #include "WarriorLayer.h"
 #include "HeroBulletManager.h"
 #include "EnemyManager.h"
-
-
+#include "EnemyModel.h"
+#include "Effects.h"
 class GamingLayer: public BasicLayer {
     
     
@@ -41,8 +41,8 @@ public:
      WarriorLayer* mWarrior;
 
     EnemyManager* mEnemyManager;
+ 
 
-    
     HeroBulletMananger* mHeroBulletManager;
 };
 

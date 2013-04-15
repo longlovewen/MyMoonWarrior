@@ -94,7 +94,7 @@ void PauseLayer::registerWithTouchDispatcher(void){
         CCLayer::registerWithTouchDispatcher();
     
     
-       CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this,std::numeric_limits <int> ::min() ,true	);
+       CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this,INT_MIN+1 ,true	);
     
 }
 
