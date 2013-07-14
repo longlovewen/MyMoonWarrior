@@ -10,11 +10,22 @@
 #include "ScoreLayer.h"
 #include "TimerLayer.h"
 #include "PauseLayer.h"
+#include "DLog.h"
+#include "WelcomeLayer.h"
 
 
+GamingLayer::GamingLayer(){
+    
+    m_pauseLayer = PauseLayer::create();
+    
+    CC_SAFE_RETAIN( m_pauseLayer );
 
-GamingLayer::GamingLayer(){}
-GamingLayer::~GamingLayer(){}
+}
+GamingLayer::~GamingLayer(){
+
+    
+    CC_SAFE_RELEASE_NULL( m_pauseLayer );
+}
 
 bool GamingLayer::init(){
     
@@ -23,13 +34,26 @@ bool GamingLayer::init(){
     }
     
     
+
     setupViews();
     
+    DLog::sharedDLog()->d( "初始化游戏场景" );
     
     return true;
 
 }
 
+
+void GamingLayer::to_cover_logic(){
+
+    //  todo 等待修改pauselayer的加载方式之后再添加
+    
+    CCDirector::sharedDirector()->resume();
+    
+    CCDirector::sharedDirector()->replaceScene( CCTransitionFade::create(1.0f, WelcomeLayer::scene()));
+    
+    
+}
 
 //  初始化控件和布景
 void GamingLayer::setupViews(){
@@ -47,12 +71,12 @@ void GamingLayer::setupViews(){
         bg2->setPosition( ccp(0,576) );
         
         
-        this->addChild( bg1,0,11 );
-        this->addChild( bg2,0,12 );
+        //this->addChild( bg1,0,11 );
+       // this->addChild( bg2,0,12 );
         
         
         //  背景滚动的schedule方法
-        this->schedule( schedule_selector( GamingLayer::background_scroll_logic),0.1f );
+       // this->schedule( schedule_selector( GamingLayer::background_scroll_logic),0.1f );
         
         //  加入分数布景        
         ScoreLayer* score_layer = ScoreLayer::create();
@@ -111,44 +135,24 @@ void GamingLayer::setupViews(){
         
      
         
+        
     } while ( 0 );
 }
 
 void GamingLayer::warrior_add_new_bullet( float t ){
 
-    mHeroBulletManager->addNewBullet( mWarrior->getHeroPosition(),mWarrior->getHeroSize() );
+    mHeroBulletManager->addNewBullet( mWarrior->getHeroPosition(),mWarrior->m_warrior->boundingBox());
 }
 
 
 
 //  暂停逻辑
 void GamingLayer::pause_logic( CCObject* pSender ){
+    
+    this->addChild( m_pauseLayer,99,99 );
 
-    mWarrior->setTouchEnabled( false );
-    
-    //  加入pause layer 并设定它为隐藏的
-    
-    PauseLayer* m_pause_layer = PauseLayer::create();
-    m_pause_layer->setPosition( CCPointZero );
-    
-    m_pause_layer->setVisible( true );
-    this->addChild( m_pause_layer,99,99 );
-    
-    
-    //  2.调用CCDirector的pause 函数
     CCDirector::sharedDirector()->pause();    
 
-    
-    //  3.设定CCMenu 的enable 为false
-    CCMenu* menu =    (CCMenu*) getChildByTag(156);
-    
-    menu->setEnabled( false );
-    
-    //  4.如果背景音乐正在播放 应该去暂停它
-    
-    if( SimpleAudioEngine::sharedEngine()->isBackgroundMusicPlaying()){
-        SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
-    }
 
 }
 

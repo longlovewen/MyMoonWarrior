@@ -8,8 +8,12 @@
 
 #include "HeroBulletManager.h"
 #define OFFSIDE_HEIGHT 1200
+#define OFFSIDE_WIDTH_LEFT -120
+#define OFFSIDE_WIDTH_RIGHT 600
 #include "GamingLayer.h"
 
+#include "NewBullet.h"
+#include "DLog.h"
 #include "EnemyModel.h"
 HeroBulletMananger::HeroBulletMananger(){}
 HeroBulletMananger::~HeroBulletMananger(){}
@@ -62,29 +66,42 @@ void HeroBulletMananger::setupViews(){
 }
 
 //  添加子弹 -- 对外的 其实就是对WarriorLayer
-void HeroBulletMananger::addNewBullet(const CCPoint point,const CCSize flySize ){
+void HeroBulletMananger::addNewBullet(const CCPoint point,const CCRect planeBox  ){
     
     
     //  飞机的左子弹
-    CCSprite* bulletSprite = CCSprite::createWithSpriteFrameName( "W1.png" );
+    NewBullet* bulletSprite = NewBullet::createWithSpriteFrameName( "W1.png" );
    
-        
-    bulletSprite->setPosition( ccp( point.x - flySize.width / 4 , point.y + flySize.height / 2  )  );
+    CCRect bBox = bulletSprite->boundingBox();
+    
+    
+    bulletSprite->setBulletTag( 1 );
+    bulletSprite->setPosition( ccp( planeBox.getMinX(),planeBox.getMaxY())  );
 
     
     //  飞机的右子弹
-    CCSprite* bullet2 = CCSprite::createWithSpriteFrameName( "W1.png" );
+    NewBullet* bullet2 = NewBullet::createWithSpriteFrameName( "W1.png" );
     
-    bullet2->setPosition( ccp( point.x + flySize.width / 4 , point.y + flySize.height / 2  )  );
+    bullet2->setPosition( ccp( planeBox.getMaxX(),planeBox.getMaxY())  );
 
+    bullet2->setBulletTag( 3 );
+    
+    //  飞机的中间子弹
+    NewBullet* bullet3 = NewBullet::createWithSpriteFrameName( "W1.png" );
+    
+    bullet3->setPosition( ccp( planeBox.getMidX(),  planeBox.getMaxY() ) );
+    
+    bullet3->setBulletTag( 2 );
     
     //  加入到数组中
     bulletsArray->addObject( bulletSprite );
     bulletsArray->addObject( bullet2 );
-
+    bulletsArray->addObject( bullet3 );
+    
     //  加入到BatchNode中
     mBulletsBatchNode->addChild( bulletSprite );
     mBulletsBatchNode->addChild( bullet2 );
+    mBulletsBatchNode->addChild( bullet3 );
   
    
     
@@ -100,12 +117,51 @@ void HeroBulletMananger::moveAllBullets( float t ){
     CCObject* oo = NULL;
     CCARRAY_FOREACH( bulletsArray, obj ){
     
-        CCSprite* sp = ( CCSprite*)obj;
+        NewBullet* sp = ( NewBullet*)obj;
         
-        sp->setPositionY( sp->getPositionY() + 10 );
+       
+        
+        //  todo  根据子弹的tag 来设定方向
+        
+        int bTag  = sp->getBulletTag();
+        if (  bTag == 1 ) {
+        
+        //  角度转换成弧度
+        float radius  =  CC_DEGREES_TO_RADIANS( 45 );
+            
+            float yspeed  =  sin( radius ) * 10 ;
+            float xspeed = cos( radius )* 10;
+            
+            DLog::sharedDLog()->d( "xspeed:%f", xspeed );
+            DLog::sharedDLog()->d( "yspeed:%f", yspeed );
+             sp->setPositionY( sp->getPositionY() + yspeed );
+            sp->setPositionX( sp->getPositionX() - 10 );
+            
+            sp->setRotation( 135);
+            
+        }else if( bTag == 2 ){
+        
+            sp->setPositionY( sp->getPositionY() + 10 );
+        }else if( bTag == 3 ) {
+            //  角度转换成弧度
+            float radius  =  CC_DEGREES_TO_RADIANS( 45 );
+        
+            float yspeed  =  sin( radius ) * 10 ;
+            float xspeed = cos( radius )* 10;
+            
+            DLog::sharedDLog()->d( "xspeed:%f", xspeed );
+            DLog::sharedDLog()->d( "yspeed:%f", yspeed );
+            sp->setPositionY( sp->getPositionY() + yspeed );
+            sp->setPositionX( sp->getPositionX() + 10 );
+            
+            sp->setRotation( 45);
+
+        }
+        
+  
         
         //  如果出边界则移除子弹，否则进行判断
-        if( sp->getPositionY() > OFFSIDE_HEIGHT){
+        if( sp->getPositionY() > OFFSIDE_HEIGHT || sp->getPositionX() < OFFSIDE_WIDTH_LEFT || sp->getPositionX() > OFFSIDE_WIDTH_RIGHT ){
         
             mBulletsBatchNode->removeChild( sp , true );
             

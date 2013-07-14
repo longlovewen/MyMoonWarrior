@@ -36,6 +36,8 @@ public:
     
     void play_logic( CCObject* pSender);
 
+    void to_cover_logic( CCObject* psender );
+    
     
 };
 

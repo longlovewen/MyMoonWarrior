@@ -37,7 +37,7 @@ public:
     void setEnabledTouch( bool flag );
     
     
-private:
+public:
     CCSprite* m_warrior;
 
 

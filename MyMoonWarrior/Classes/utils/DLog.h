@@ -23,6 +23,17 @@ public:
     
     DLog();
     ~DLog();
-    static void d( const char* content );
+    void d( const char * pszFormat, ... );
+    
+    
+    static DLog* sharedDLog();
+    
+    
+    void purge();
+    
+    
+    
+    
+    
 };
 #endif /* defined(__MyMoonWarrior__DLog__) */

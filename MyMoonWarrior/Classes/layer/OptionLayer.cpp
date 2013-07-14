@@ -133,8 +133,6 @@ CCScene* OptionLayer::scene(){
 
 void OptionLayer::back_callback( CCObject* pSender ){
 
-    CCLOG( "back" );
-    
-    CCDirector::sharedDirector()->pushScene( CCTransitionFade::create( 0.5f, WelcomeLayer::scene()));
+    CCDirector::sharedDirector()->popScene();
 
 }

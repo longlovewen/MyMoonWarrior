@@ -8,6 +8,8 @@
 
 #include "PauseLayer.h"
 #include "GamingLayer.h"
+#include "DLog.h"
+#include "CescMenu.h"
 
 PauseLayer::PauseLayer(){}
 PauseLayer::~PauseLayer(){}
@@ -35,49 +37,47 @@ void PauseLayer::setupViews(){
         
         CCMenuItemImage* resumeItem = CCMenuItemImage::create("play.png", "play.png", this, menu_selector(PauseLayer::play_logic));
         
-        resumeItem->setPosition( ccp( size.width / 2, size.height / 2  ));
+        CCMenuItemImage* toCoverItem = CCMenuItemImage::create( "Icon.png", "Icon.png",this,menu_selector( PauseLayer::to_cover_logic ));
         
         
-        CCMenu* menu = CCMenu::create( resumeItem, NULL );
         
-        menu->setPosition( CCPointZero );
+        
+        CescMenu* menu = CescMenu::create( resumeItem,toCoverItem, NULL );
+        menu->alignItemsVerticallyWithPadding( 10 );
+        menu->setPosition( ccp( size.width / 2, size.height / 2  ));
         
         this->addChild( menu );
         
-      
+        this->setTouchEnabled( true );
         
         
     } while (0);
 
 }
 
+void PauseLayer::to_cover_logic(cocos2d::CCObject *pSender){
+
+    //  todo 调用gameworld 的返回菜单的逻辑
+    
+    DLog::sharedDLog()->d( "返回主菜单" );
+    
+    GamingLayer* father =   (GamingLayer*)this->getParent();
+    
+    father->to_cover_logic();
+    
+    this->removeFromParentAndCleanup( true );
+}
+
 //  恢复逻辑
 void PauseLayer::play_logic( CCObject* pSender){
     
     
-    CCLOG("点击恢复");
-    GamingLayer* fatherNode = (GamingLayer*)getParent();   
+    this->removeFromParentAndCleanup( true );
 
-    
-    //  1. 将这个暂停层进行移植
-    fatherNode->removeChildByTag( 99, true );
-    
-    // 2. 设定CCMenu(父节点中)enable 为true
-    CCMenu* menu = (CCMenu*) fatherNode->getChildByTag( 156 );
-    menu->setEnabled( true );
-    
-    fatherNode->mWarrior->setTouchEnabled( true );
-    
-    // 3.调用 CCDirector 的 resume 方法
     CCDirector::sharedDirector()->resume();
     
-    // 4.恢复背景音乐
     
-    SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
-    
-    
-    
-    setTouchEnabled( true );
+    DLog::sharedDLog()->d( "恢复游戏" );
     
 
 }
@@ -94,7 +94,7 @@ void PauseLayer::registerWithTouchDispatcher(void){
         CCLayer::registerWithTouchDispatcher();
     
     
-       CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this,INT_MIN+1 ,true	);
+       CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this,-129 ,true	);
     
 }
 

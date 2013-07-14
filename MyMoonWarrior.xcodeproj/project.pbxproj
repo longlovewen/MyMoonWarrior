@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CE11487416E4E7C1009EB0E6 /* OptionLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE11487216E4E7C1009EB0E6 /* OptionLayer.cpp */; };
+		CE1ADB4B1792B0ED000D609A /* game.tmx in Resources */ = {isa = PBXBuildFile; fileRef = CE1ADB4A1792B0ED000D609A /* game.tmx */; };
+		CE1ADB4E1792B943000D609A /* CescMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1ADB4C1792B943000D609A /* CescMenu.cpp */; };
+		CE1ADB511792BCA2000D609A /* NewBullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE1ADB4F1792BCA2000D609A /* NewBullet.cpp */; };
 		CE486DEA171AE9220064F68B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE486DE9171AE9220064F68B /* Default-568h@2x.png */; };
 		CE486DEE171AEDC80064F68B /* Effects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE486DEC171AEDC80064F68B /* Effects.cpp */; };
 		CE4C9D0116ECB84300DDE450 /* DLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C9CFF16ECB84300DDE450 /* DLog.cpp */; };
@@ -250,6 +253,11 @@
 /* Begin PBXFileReference section */
 		CE11487216E4E7C1009EB0E6 /* OptionLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OptionLayer.cpp; path = Classes/layer/OptionLayer.cpp; sourceTree = "<group>"; };
 		CE11487316E4E7C1009EB0E6 /* OptionLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionLayer.h; path = Classes/layer/OptionLayer.h; sourceTree = "<group>"; };
+		CE1ADB4A1792B0ED000D609A /* game.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = game.tmx; path = Resources/game.tmx; sourceTree = "<group>"; };
+		CE1ADB4C1792B943000D609A /* CescMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CescMenu.cpp; path = Classes/CescMenu.cpp; sourceTree = "<group>"; };
+		CE1ADB4D1792B943000D609A /* CescMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CescMenu.h; path = Classes/CescMenu.h; sourceTree = "<group>"; };
+		CE1ADB4F1792BCA2000D609A /* NewBullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NewBullet.cpp; path = Classes/NewBullet.cpp; sourceTree = "<group>"; };
+		CE1ADB501792BCA2000D609A /* NewBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewBullet.h; path = Classes/NewBullet.h; sourceTree = "<group>"; };
 		CE486DE9171AE9220064F68B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CE486DEC171AEDC80064F68B /* Effects.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Effects.cpp; path = Classes/utils/Effects.cpp; sourceTree = "<group>"; };
 		CE486DED171AEDC80064F68B /* Effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Effects.h; path = Classes/utils/Effects.h; sourceTree = "<group>"; };
@@ -782,6 +790,10 @@
 		CE65ED23170329D600E84371 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CE1ADB4C1792B943000D609A /* CescMenu.cpp */,
+				CE1ADB4F1792BCA2000D609A /* NewBullet.cpp */,
+				CE1ADB501792BCA2000D609A /* NewBullet.h */,
+				CE1ADB4D1792B943000D609A /* CescMenu.h */,
 				CE4C9D0216ECB96500DDE450 /* GamingLayer.cpp */,
 				CE4C9D0316ECB96500DDE450 /* GamingLayer.h */,
 				CEFC52E116E10E930030FAE9 /* BasicLayer.cpp */,
@@ -852,6 +864,7 @@
 		CEFC501116E108010030FAE9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE1ADB4A1792B0ED000D609A /* game.tmx */,
 				CEDB911A16F58B19004B1FC1 /* Monster.plist */,
 				CEDB911B16F58B19004B1FC1 /* Monster.png */,
 				CEFC52DD16E10BBA0030FAE9 /* Font */,
@@ -1777,6 +1790,7 @@
 				CEFC502716E108010030FAE9 /* iTunesArtwork in Resources */,
 				CEFC50B916E108020030FAE9 /* ChangeLog in Resources */,
 				CEFC52C416E10B3B0030FAE9 /* arial-14.fnt in Resources */,
+				CE1ADB4B1792B0ED000D609A /* game.tmx in Resources */,
 				CEFC52C516E10B3B0030FAE9 /* arial-14.GlyphProject in Resources */,
 				CEFC52C616E10B3B0030FAE9 /* arial-14.png in Resources */,
 				CEFC52C716E10B3B0030FAE9 /* b01.png in Resources */,
@@ -1848,6 +1862,8 @@
 				CEFC508A16E108020030FAE9 /* CCSet.cpp in Sources */,
 				CEFC508D16E108020030FAE9 /* CCString.cpp in Sources */,
 				CEFC509016E108020030FAE9 /* CCZone.cpp in Sources */,
+				CE1ADB4E1792B943000D609A /* CescMenu.cpp in Sources */,
+				CE1ADB511792BCA2000D609A /* NewBullet.cpp in Sources */,
 				CEFC509316E108020030FAE9 /* cocos2d.cpp in Sources */,
 				CEFC509616E108020030FAE9 /* CCGrabber.cpp in Sources */,
 				CEFC509916E108020030FAE9 /* CCGrid.cpp in Sources */,

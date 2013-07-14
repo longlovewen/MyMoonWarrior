@@ -30,7 +30,7 @@ public:
     
     CREATE_FUNC( HeroBulletMananger );
     
-    void addNewBullet( const CCPoint point,const CCSize flySize  );
+    void addNewBullet( const CCPoint point,const CCRect planeBox );
     
     void moveAllBullets( float t );
     

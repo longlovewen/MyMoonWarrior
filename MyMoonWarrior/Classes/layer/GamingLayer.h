@@ -16,6 +16,7 @@
 #include "EnemyManager.h"
 #include "EnemyModel.h"
 #include "Effects.h"
+#include "PauseLayer.h"
 class GamingLayer: public BasicLayer {
     
     
@@ -38,12 +39,18 @@ public:
     
     void warrior_add_new_bullet( float t );
     
+    
+    void to_cover_logic();  //  返回主菜单的逻辑
+    
      WarriorLayer* mWarrior;
 
     EnemyManager* mEnemyManager;
  
 
     HeroBulletMananger* mHeroBulletManager;
+    
+private:
+    PauseLayer* m_pauseLayer;
 };
 
 #endif /* defined(__MyMoonWarrior__GamingLayer__) */

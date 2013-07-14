@@ -17,7 +17,7 @@ EnemyManager::EnemyManager(){
 }
 EnemyManager::~EnemyManager(){
 
-    CC_SAFE_DELETE_ARRAY( enemyArray );
+    CC_SAFE_DELETE( enemyArray );
     
     
     
